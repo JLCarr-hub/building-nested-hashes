@@ -1,16 +1,12 @@
-epic_tragedy[:montague][:patriarch][:name] = "Lord Montague"
-
-puts epic_tragedy
-
-#  =>
-{
+def fifth_challenge
+epic_tragedy = {
    :montague => {
       :patriarch => {name: "Lord Montague", age: "53"},
       :matriarch => {name: "Lady Montague", age: "54"},
       :hero => {name: "Romeo", age: "15", status: "alive"},
-      :hero_friends => [
-        {name: "Benvolio", age: "17", attitude: "worried"},
-        {name: "Mercutio", age: "18", attitude: "hot-headed"}
+      :hero_friends => [ {name: "Benvolio", age: "17", attitude: "worried"},
+                          {name: "Mercutio", age: "18", attitude: "hot-headed"}
+
       ]
    },
    :capulet => {
@@ -22,4 +18,14 @@ puts epic_tragedy
         {name: "Nurse", age: "44", attitude: "worried"}
       ]
    }
-} 
+}
+
+epic_tragedy[:montague][:hero][:status] = "dead"
+epic_tragedy[:capulet][:heroine][:status] = "dead"
+
+ epic_tragedy
+end
+# :montague => {
+#    :hero => {name: "Romeo", age: "15", status: "dead"}
+#    :capulet => {
+#       :heroine => {name: "Juliet", age: "15", status: "dead"}
